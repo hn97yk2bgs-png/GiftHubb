@@ -299,3 +299,325 @@ footer{
 </body>
 </html>
 ```
+<!-- =========================================
+PRODUCTION LEVEL SECTION START
+========================================= -->
+
+<section class="architecture">
+
+  <h2>🏗 Системийн Архитектур</h2>
+
+  <p class="section-text">
+    Энэ бол production түвшний романтик вэбсайт бүтээгч платформ юм.
+    Систем нь хурдтай, аюулгүй, өргөтгөх боломжтой байдлаар бүтээгдэнэ.
+  </p>
+
+  <div class="grid">
+
+    <div class="box">
+      <h3>⚡ Frontend</h3>
+
+      <ul>
+        <li>Next.js 15</li>
+        <li>TypeScript</li>
+        <li>Tailwind CSS</li>
+        <li>Framer Motion</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h3>🗄 Backend</h3>
+
+      <ul>
+        <li>Supabase</li>
+        <li>PostgreSQL</li>
+        <li>Row Level Security</li>
+        <li>Realtime API</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h3>☁ Storage</h3>
+
+      <ul>
+        <li>Cloudinary</li>
+        <li>Supabase Storage</li>
+        <li>CDN Delivery</li>
+        <li>Image Optimization</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h3>🔐 Authentication</h3>
+
+      <ul>
+        <li>Email Login</li>
+        <li>Google OAuth</li>
+        <li>JWT Session</li>
+        <li>Protected Routes</li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================================
+DATABASE SECTION
+========================================= -->
+
+<section class="database">
+
+  <h2>🗃 Database Schema</h2>
+
+  <div class="schema-card">
+
+<pre>
+
+users
+ ├── id
+ ├── email
+ ├── avatar
+ └── created_at
+
+websites
+ ├── id
+ ├── user_id
+ ├── title
+ ├── slug
+ ├── template
+ ├── theme
+ ├── published
+ └── created_at
+
+memories
+ ├── id
+ ├── website_id
+ ├── image_url
+ ├── caption
+ └── created_at
+
+music
+ ├── id
+ ├── website_id
+ ├── audio_url
+ └── created_at
+
+</pre>
+
+  </div>
+
+</section>
+
+<!-- =========================================
+FOLDER STRUCTURE
+========================================= -->
+
+<section class="folder-structure">
+
+  <h2>📁 Folder Structure</h2>
+
+  <div class="schema-card">
+
+<pre>
+
+app/
+ ├── dashboard/
+ ├── editor/
+ ├── site/[slug]/
+ ├── login/
+ └── api/
+
+components/
+ ├── ui/
+ ├── templates/
+ ├── dashboard/
+ └── animations/
+
+lib/
+ ├── supabase/
+ ├── auth/
+ └── utils/
+
+styles/
+ └── globals.css
+
+</pre>
+
+  </div>
+
+</section>
+
+<!-- =========================================
+ROADMAP
+========================================= -->
+
+<section class="roadmap">
+
+  <h2>🛣 Хөгжүүлэлтийн Roadmap</h2>
+
+  <div class="timeline">
+
+    <div class="step">
+      <span>1</span>
+      <h3>Authentication System</h3>
+      <p>Login, Register болон хамгаалалттай route хийх.</p>
+    </div>
+
+    <div class="step">
+      <span>2</span>
+      <h3>Template Engine</h3>
+      <p>Романтик template болон animation system хийх.</p>
+    </div>
+
+    <div class="step">
+      <span>3</span>
+      <h3>Website Editor</h3>
+      <p>User өөрийн site-аа drag & drop-оор засварлана.</p>
+    </div>
+
+    <div class="step">
+      <span>4</span>
+      <h3>Media Upload</h3>
+      <p>Зураг болон хөгжим upload хийх.</p>
+    </div>
+
+    <div class="step">
+      <span>5</span>
+      <h3>Publish System</h3>
+      <p>Slug болон share link үүсгэх.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================================
+STYLE
+========================================= -->
+
+<style>
+
+.architecture,
+.database,
+.folder-structure,
+.roadmap{
+  padding:100px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.architecture h2,
+.database h2,
+.folder-structure h2,
+.roadmap h2{
+  font-size:48px;
+  margin-bottom:20px;
+  text-align:center;
+}
+
+.section-text{
+  text-align:center;
+  max-width:800px;
+  margin:auto;
+  opacity:0.8;
+  margin-bottom:60px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.box{
+  background:#1a1a1a;
+  padding:30px;
+  border-radius:24px;
+  transition:0.4s;
+}
+
+.box:hover{
+  transform:translateY(-10px);
+  background:#252525;
+}
+
+.box h3{
+  margin-bottom:20px;
+}
+
+.box ul{
+  list-style:none;
+}
+
+.box li{
+  margin-bottom:10px;
+  opacity:0.8;
+}
+
+.schema-card{
+  background:#151515;
+  padding:40px;
+  border-radius:24px;
+  overflow:auto;
+}
+
+pre{
+  color:#00ff99;
+  line-height:1.8;
+}
+
+.timeline{
+  display:grid;
+  gap:25px;
+}
+
+.step{
+  background:#1b1b1b;
+  padding:30px;
+  border-radius:20px;
+  position:relative;
+}
+
+.step span{
+  position:absolute;
+  top:-15px;
+  left:-15px;
+
+  width:45px;
+  height:45px;
+
+  border-radius:50%;
+  background:#ff4d6d;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-weight:bold;
+}
+
+.step h3{
+  margin-bottom:10px;
+}
+
+.step p{
+  opacity:0.8;
+}
+
+@media(max-width:768px){
+
+  .architecture h2,
+  .database h2,
+  .folder-structure h2,
+  .roadmap h2{
+    font-size:36px;
+  }
+
+}
+
+</style>
+
+<!-- =========================================
+PRODUCTION LEVEL SECTION END
+========================================= -->
