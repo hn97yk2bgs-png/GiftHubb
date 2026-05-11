@@ -1,2 +1,25 @@
-# Auto detect text files and perform LF normalization
+src/
+ ├── app/
+ │    ├── dashboard/
+ │    ├── admin/
+ │    ├── site/
+ │    │    └── [slug]/
+ │    ├── auth/
+ │    └── api/
+ │
+ ├── components/
+ │    ├── ui/
+ │    ├── templates/
+ │    ├── dashboard/
+ │    └── shared/
+ │
+ ├── lib/
+ │    ├── supabase/
+ │    ├── validations/
+ │    └── utils/
+ │
+ ├── hooks/
+ ├── store/
+ ├── types/
+ └── styles/to detect text files and perform LF normalization
 * text=auto
